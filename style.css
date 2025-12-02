@@ -361,6 +361,21 @@ footer {
     font-weight: 500;
 }
 
+/* Footer inner layout and credit */
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.fs-left { color: #ffcf00; }
+.fs-right { color: #ddd; font-weight: 500; }
+.fs-credit { display: inline-flex; align-items: center; gap: 0.5rem; color: #ffd34d; text-decoration: none; }
+.fs-credit:hover { text-decoration: underline; }
+.footer-logo { width: 30px; height: 30px; object-fit: contain; border-radius: 6px; }
+
 /* Responsive */
 @media(max-width: 768px) {
     header h1 {

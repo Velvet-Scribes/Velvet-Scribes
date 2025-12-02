@@ -1,6 +1,6 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.velvet-scribes.com/sitemap.xml
+Sitemap: https://velvet-scribes.github.io/Velvet-Scribes/sitemap.xml
 # If you use a staging or dev subdomain, disallow it here.
 # For security, add any private paths you want crawlers to avoid.

@@ -1,25 +1,27 @@
 const form = document.getElementById("requestForm");
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
+if (form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    // Your Google Form POST URL
-    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSd1KlMzS3EAQ0g8t4u_wsVgr72m4UaJ8n5vjFS7gIZaD_dH4g/formResponse";
+        // Your Google Form POST URL
+        const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSd1KlMzS3EAQ0g8t4u_wsVgr72m4UaJ8n5vjFS7gIZaD_dH4g/formResponse";
 
-    // Your field ID
-    const entryID = "entry.528844909";
+        // Your field ID
+        const entryID = "entry.528844909";
 
-    const userText = document.getElementById("requestText").value;
+        const userText = document.getElementById("requestText").value;
 
-    // Construct final submit URL
-    const submitUrl = `${googleFormUrl}?${entryID}=${encodeURIComponent(userText)}`;
+        // Construct final submit URL
+        const submitUrl = `${googleFormUrl}?${entryID}=${encodeURIComponent(userText)}`;
 
-    // Send form (opens new tab)
-    window.open(submitUrl, "_blank");
+        // Send form (opens new tab)
+        window.open(submitUrl, "_blank");
 
-    // Clear textarea
-    document.getElementById("requestText").value = "";
-});
+        // Clear textarea
+        document.getElementById("requestText").value = "";
+    });
+}
 
 // Mobile navigation toggle (safe if elements are absent)
 (function() {

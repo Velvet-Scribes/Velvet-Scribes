@@ -41,4 +41,23 @@ if (form) {
         navLinks.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
     }));
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.classList.contains('open')) return;
+        const target = e.target;
+        if (!navLinks.contains(target) && !navToggle.contains(target)) {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.focus();
+        }
+    });
 })();
